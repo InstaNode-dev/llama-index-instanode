@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llama-index-tools-instanode"
+version = "0.1.0"
+description = "LlamaIndex tools for instanode.dev — provision Postgres + webhooks from LlamaIndex agents"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+keywords = [
+    "llama-index",
+    "llama-index-tools",
+    "llamahub",
+    "instanode",
+    "postgres",
+    "database",
+    "webhook",
+    "ai-agents",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Database",
+]
+dependencies = [
+    "instanode>=0.2.0",
+    "llama-index-core>=0.11.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://instanode.dev"
+Repository = "https://github.com/InstaNode-dev/llama-index-instanode"
+"Bug Tracker" = "https://github.com/InstaNode-dev/llama-index-instanode/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["llama_index_tools_instanode*"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
