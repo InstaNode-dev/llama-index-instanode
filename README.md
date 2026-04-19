@@ -25,10 +25,13 @@ agent.chat(
 
 The agent gets four tools:
 
-- `provision_postgres(name?)` → `postgres://` DSN (pgvector pre-installed).
-- `provision_webhook(name?)` → HTTPS receiver URL.
-- `provision_mongo(name?)` → `mongodb://` URI.
+- `provision_postgres(name)` → `postgres://` DSN (pgvector pre-installed).
+- `provision_webhook(name)` → HTTPS receiver URL.
 - `list_resources()` → enumerate resources owned by the current API key.
+
+MongoDB, Redis/cache, NATS queue, and heartbeat-monitor tools are on the
+roadmap, gated on the matching backend endpoints landing. They live on
+the `feature/full-api` branch.
 
 ### Scoping to specific tools
 

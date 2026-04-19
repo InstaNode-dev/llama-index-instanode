@@ -28,5 +28,5 @@ Links
 
 from llama_index_tools_instanode.base import InstanodeToolSpec
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __all__ = ["InstanodeToolSpec"]

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "llama-index-tools-instanode"
-version = "0.1.0"
+version = "0.2.0"
 description = "LlamaIndex tools for instanode.dev — provision Postgres + webhooks from LlamaIndex agents"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -32,7 +32,7 @@ classifiers = [
     "Topic :: Database",
 ]
 dependencies = [
-    "instanode>=0.2.0",
+    "instanode>=0.3.0",
     "llama-index-core>=0.11.0",
 ]
 
